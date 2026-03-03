@@ -1,0 +1,5 @@
+---
+BasedOnStyle: Google
+UseTab: Never
+QualifierAlignment: Right
+...
