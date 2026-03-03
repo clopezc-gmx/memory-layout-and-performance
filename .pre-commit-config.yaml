@@ -33,13 +33,6 @@ repos:
   repo: https://github.com/gitleaks/gitleaks
   rev: v8.30.0
 - hooks:
-  - args:
-    - --config=.proselint.json
-    files: \.md$
-    id: proselint
-  repo: https://github.com/amperser/proselint.git
-  rev: v0.16.0
-- hooks:
   - id: commitizen
     stages:
     - commit-msg
