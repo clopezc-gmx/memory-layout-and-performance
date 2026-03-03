@@ -1,0 +1,6 @@
+[submodule "submodules/lyra"]
+	path = submodules/lyra
+	url = https://github.com/bfgroup/Lyra.git
+[submodule "submodules/cpptrace"]
+	path = submodules/cpptrace
+	url = https://github.com/jeremy-rifkin/cpptrace.git
