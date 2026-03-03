@@ -1,1 +1,6 @@
 tags
+
+# editor-only tooling (local markdownlint via npm; not part of project dependencies)
+node_modules/
+package.json
+package-lock.json
