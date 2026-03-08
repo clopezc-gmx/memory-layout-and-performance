@@ -1,6 +1,8 @@
+# dev tools
 tags
-
-# editor-only tooling (local markdownlint via npm; not part of project dependencies)
 .devtools/
+.cache/
+compile_commands.json
 
+#
 build/
