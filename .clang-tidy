@@ -1,3 +1,4 @@
+---
 Checks: >
   *,
   -abseil-*,
@@ -23,24 +24,25 @@ Checks: >
   -cppcoreguidelines-avoid-do-while,
   -readability-avoid-unconditional-preprocessor-if,
   -readability-magic-numbers,
-  -readability-identifier-length
+  -readability-identifier-length,
+  -boost-use-ranges
 
-WarningsAsErrors: ''
+WarningsAsErrors: ""
 
-HeaderFilterRegex: ''
+HeaderFilterRegex: ""
 
-FormatStyle: google
+FormatStyle: file
 
 CheckOptions:
   - key: cppcoreguidelines-avoid-c-arrays.AllowedTypes
-    value: 'char'
+    value: "char"
   - key: modernize-avoid-c-arrays.AllowedTypes
-    value: 'char'
+    value: "char"
   - key: cppcoreguidelines-avoid-c-arrays.IgnoreMacros
-    value: 'true'
+    value: "true"
   - key: modernize-avoid-c-arrays.IgnoreMacros
-    value: 'true'
+    value: "true"
   - key: cppcoreguidelines-avoid-c-arrays.IgnoreConstexpr
-    value: 'true'
+    value: "true"
   - key: modernize-avoid-c-arrays.IgnoreConstexpr
-    value: 'true'
+    value: "true"
