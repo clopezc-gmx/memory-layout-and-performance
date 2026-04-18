@@ -2,23 +2,19 @@
 
 #include <cassert>
 #include <iostream>
+#include <lyra/lyra.hpp>
 #include <new>
 
-#include "lyra/args.hpp"
-#include "lyra/arguments.hpp"
-#include "lyra/cli.hpp"
-#include "lyra/opt.hpp"
-#include "lyra/parser.hpp"
-
 ReturnCode ParseArguments(int argc, char** argv, Config& config) {
-  auto cli =
-      lyra::cli() |
-      lyra::opt(config.size_in_bytes, "bytes")["--size"]("Size in bytes") |
-      lyra::opt(config.use_random_access,
-                "bool")["--random-access"]("Use random access pattern") |
-      lyra::opt(config.use_for_loop,
-                "bool")["--for-loop"]("Use for-loop implementation") |
-      lyra::opt(config.seed, "int")["--seed"]("Random seed");
+  // Read input args
+  auto cli = lyra::cli() |
+             lyra::opt(config.size_in_bytes,
+                       "bytes")["--size_in_bytes"]("Size in bytes") |
+             lyra::opt(config.use_random_access,
+                       "bool")["--random-access"]("Use random access pattern") |
+             lyra::opt(config.use_for_loop,
+                       "bool")["--for-loop"]("Use for-loop implementation") |
+             lyra::opt(config.seed, "int")["--seed"]("Random seed");
 
   auto result = cli.parse({argc, argv});
   if (!result) {

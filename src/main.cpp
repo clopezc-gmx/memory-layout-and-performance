@@ -25,13 +25,19 @@ size_t ComputeSum(Config const& config) {
   }
 
   if (config.use_for_loop) {
-    assert(config.use_for_loop == false);
-    for (size_t ii = 0; ii < data.size(); ii++) {
+    // sequential access
+    assert(config.use_random_access == false);
+    for (auto ii : data) {
       sum += data[ii];
     }
 
   } else {
     // perform sum using a while loop
+    size_t ii = 0;
+    while (ii != config.N) {
+      sum += data[ii];
+      ii = data[ii];
+    }
   }
   return sum;
 }
